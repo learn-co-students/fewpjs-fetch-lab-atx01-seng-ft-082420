@@ -1,4 +1,9 @@
+const bookURL = 'https://anapioficeandfire.com/api/books'
+
 function fetchBooks() {
+  return fetch(bookURL)
+  .then(res => res.json())
+  .then(json => renderBooks(json))
 
 }
 
